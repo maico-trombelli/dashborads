@@ -66,7 +66,7 @@ def dados_fb(base):
     st.pyplot(fig)
 
 with st.sidebar:
-    ticker_list = pd.read_csv("tickers_ibra.csv", index_col=0)
+    ticker_list = pd.read_csv("tickers.csv", index_col=0)
     ticker = st.selectbox(label="Selecione a Acao", options=ticker_list, placeholder='Códigos')
     base_t = carrega_dados(ticker+".SA")
     datamin = base_t.index.min().to_pydatetime()
